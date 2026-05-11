@@ -22,7 +22,7 @@ jobs:
         aws-session-token: ${{ secrets.AWS_SESSION_TOKEN }}
         aws-region: ${{ secrets.AWS_REGION }}
 
-    - name: Login en Amazon ECR (runner)
+    - name: Login en Amazon ECR (runner)D
       uses: aws-actions/amazon-ecr-login@v1
 
     - name: Build imagen Backend y push a ECR
@@ -47,3 +47,5 @@ jobs:
             "docker run -d --name tienda-backend -p 3001:3001 ${{ secrets.ECR_REPO_URL_BACKEND }}:latest"
           ]}' \
           --output text
+
+          #hola mundo
